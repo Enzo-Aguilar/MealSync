@@ -3,12 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>MealSync | Login</title>
     <header>
-        <h1>MealSync | Menu</h1>
+        <h1>MealSync | Main Menu</h1>
     </header>
 </head>
 <body>
-    
+    <div id="header">
+        <nav id = "nav"> 
+
+        </nav>    
+    </div>
+    <div id="body">
+        <div id="Login">
+            <h3><strong>Log In</strong></h3>
+            <label for="user_number">User Number</label>
+            <input type="Number" id="user_number" placeholder="User Number" required> <br>
+
+            <label for="user_password">User Password</label>
+            <input type="password" id="user_password" placeholder="User Password" required>
+
+            <button type="submit" onclick="log()">Log In</button>
+            <p>New to MealSync?<a href="../frontend/register.html">Sign Up</a>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
 </body>
 </html>
