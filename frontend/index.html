@@ -16,19 +16,20 @@
         </nav>    
     </div>
     <div id="body">
-        <div id="Login">
+        <form action="../backend/index.php">
+            <div id="Login">
             <h3><strong>Log In</strong></h3>
-            <label for="user_number">User Number</label>
+            <label for="user_number" class="labels">User Number</label>
             <input type="Number" id="user_number" placeholder="User Number" required> <br>
-
-            <label for="user_password">User Password</label>
-            <input type="password" id="user_password" placeholder="User Password" required>
-
-            <button type="submit" onclick="log()">Log In</button>
-            <p>New to MealSync?<a href="../frontend/register.html">Sign Up</a>
-        </div>
+    
+                <label for="user_password" class="labels">User Password</label>
+                <input type="password" id="user_password" placeholder="User Password" required>
+    
+                <button type="submit" onclick="log()">Log In</button>
+                <p>New to MealSync?<a href="../frontend/register.html">Sign Up</a>
+            </div>
+        </form>
     </div>
-
     <script src="js/index.js"></script>
 </body>
 </html>
