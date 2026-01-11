@@ -1,0 +1,30 @@
+/*inputs, buttons, divs*/
+
+input {
+    display: block;
+    margin: 0.75rem auto;
+    padding: 0.75rem;
+    width: 13,75rem;
+    border-radius: 7px;
+}
+
+button {
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.625rem;
+}
+
+div{
+    display: grid;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(43, 143, 43);
+    width: auto;
+    border-radius: 10px;
+}
+
+.Res{
+    color: red;
+}
+
+
+
