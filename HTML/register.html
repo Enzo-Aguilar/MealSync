@@ -1,38 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme ="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/CSS/main.css">
-  <script  type="module" src="/JS/register.js" defer></script>
-  <title>MealSync | Register</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/main.css">
+    <script type="module" src="/JS/register.js" defer></script>
+    <title>MealSync | Register</title>
 </head>
 <body>
-    <header>
-        <h1>MealSync | Register</h1>
-    </header>
-        
-    <div class="Container">    
-        <form class="Form">
-            <label for="email" class="Labels">Email</label>
-            <input class="Input-form" type="email" id="email" placeholder="example@epge.pt" required>
-            
-            <label for="username" class="Labels">Username</label>
-            <input class="Input-form" type="text" id="username" placeholder="Username" required>
-            
-            <label for="password" class="Labels">Password</label>
-            <input class="Input-form" type="password" id="password" placeholder="Password"  required><br>
-            
-            <button type="submit">Register</button>
+    <nav class="Navbar">
+        <a href="/" onclick="reload()">
+            <img src="/IMG/mealSync_preto.png" alt="MealSync Logo">
+        </a>
+        <ul class="Nav-links">
+            <li><a href="/"><button onclick="change_theme()">Mudar Tema</button></a></li>
+            <li><a href="about.html"><button>About</button></a></li>
+        </ul>
+    </nav>
 
-            <p>Já tem uma conta? <a href="/HTML/index.html">Faça login</a>!!</p>
+    <div class="Container">
+        <form>
+            <label for="username" class="Labels" id="username_label">Username</label>
+            <input class="Input-form" type="text" id="username_input" placeholder="Username" required>
+
+            <label for="email" class="Labels" id="email_label">Email</label>
+            <input class="Input-form" type="email" id="email_input" placeholder="example@epge.pt" required>
+
+            <label for="password" class="Labels" id="password_label">Password</label>
+            <input class="Input-form" type="password" id="password_input" placeholder="************" required>
         </form>
     </div>
     <div class="Message">
-        <p id="email_p" class="Invalid"></p> 
-        <p id="other" class="Invalid"></p>          
-        <p id="password_p" class="Invalid"></p>
         <p id="username_p" class="Invalid"></p>
+        <p id="email_p" class="Invalid"></p>
+        <p id="password_p" class="Invalid"></p> 
     </div>
-</body>
+    </body>
 </html>

@@ -15,7 +15,7 @@
 [data-theme="dark"] {
     --primary: #38A169;
     --primary-dark: #2F855A;
-    --secondary: #F6AD55;
+    --secondary: #285E61;
 
     --background: #1A202C;
     --card-bg: #2D3748;
@@ -45,7 +45,7 @@ form{
     display: block;
     margin-bottom: 0.3rem;
     color: var(--text-muted);
-    font-size: 0.9rem;
+    font-size: 1.3rem;
 }
 
 .Input-form{
