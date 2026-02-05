@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/CSS/main.css">
+    <script type="module" src="/JS/globals.js" defer></script>
     <script type="module" src="/JS/index.js" defer></script>
     <title>MealSync | Login</title>
 </head>
@@ -26,16 +27,14 @@
             <label for="password" class="Labels" id="password_label">Password</label>
             <input class="Input-form" type="password" id="password_input" placeholder="Password" required>
 
-            <button type="submit">Login</button>
+            <button type="submit" id="submitButton">Login</button>
 
             <p>Novo no MealSync? <a href="/HTML/register.html">Registar-se</a></p>
         </form>
     </div>
 
     <div class="Message"> 
-        <p id="email_p" class="Invalid"></p>
-        <p id="password_p" class="Invalid"></p>
-        <p id="other_p" class="Invalid"></p>          
+        <p class="Invalid" id="msg"></p>       
     </div>
 </body>
 </html>

@@ -1,18 +1,20 @@
-  const toggleBtn = document.getElementById("themeToggle");
-  const root = document.documentElement;
+document.addEventListener("DOMContentLoaded", () => {
+  initTheme();
 
-  // Load saved theme
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme) {
-    root.setAttribute("data-theme", savedTheme);
-    toggleBtn.textContent = savedTheme === "dark" ? "☀️" : "🌙";
+  const btn = document.getElementById("themeToggle");
+  if (btn) {
+    btn.addEventListener("click", toggleTheme);
   }
+});
 
-  toggleBtn.addEventListener("click", () => {
-    const isDark = root.getAttribute("data-theme") === "dark";
 
-    root.setAttribute("data-theme", isDark ? "light" : "dark");
-    localStorage.setItem("theme", isDark ? "light" : "dark");
+document.addEventListener("DOMContentLoaded", () => {
+  const logo = document.querySelector(".Logo");
 
-    toggleBtn.textContent = isDark ? "🌙" : "☀️";
-  });
+  if (logo) {
+    logo.addEventListener("click", (e) => {
+      e.preventDefault();
+      softReload();
+    });
+  }
+});
