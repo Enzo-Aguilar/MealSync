@@ -1,29 +1,35 @@
 /*Global styles*/
 :root {
-    --primary: #0eb65c;
-    --primary-dark: #105f37;
-    --secondary:  #2C7A7B;
-    --background: #F7FAFC;
-    --card-bg: #FFFFFF;
-    --text-main: #2D3748;
-    --text-muted: #718096;
-    --border: #e2e8f042;
-    --danger: #E53E3E;
+    --primary: #6FB24A;        /* vibrant leafy green */
+    --primary-dark: #4F8F33;   /* rich green for hover */
+    --secondary: #9BCF7A;      /* fresh herb accent */
+    
+    --background: #F8FBF6;     /* bright but warm */
+    --card-bg: #FFFFFF;       /* crisp cards */
+    
+    --text-main: #24301F;      /* deep natural contrast */
+    --text-muted: #6E8065;     /* softer green-gray */
+    
+    --border: #DCE6D5;         /* light organic border */
+    --danger: #D84A3A;         /* lively but food-safe red */
 }
 
 [data-theme="dark"] {
-    --primary: #0eb65c;
-    --primary-dark: #105f37;
-    --secondary: #ffffff;
-
-    --background: #1A202C;
-    --card-bg: #2D3748;
-
-    --text-main: #EDF2F7;
-    --text-muted: #A0AEC0;
-
-    --border: rgba(255, 255, 255, 0.08);
+    --primary: #7FD35A;        /* fresh green pop */
+    --primary-dark: #5FAE3E;   /* hover / active */
+    --secondary: #A6E28A;      /* lively herb accent */
+    
+    --background: #1B241E;     /* lighter, warm dark */
+    --card-bg: #243029;       /* clearly lifted surface */
+    
+    --text-main: #E7F2EA;      /* soft off-white */
+    --text-muted: #A8BEB0;     /* slightly brighter muted text */
+    
+    --border: #33453A;         /* visible but soft */
+    --danger: #E05C4F;         /* clear but not harsh */
 }
+
+
 
 * {
     margin: 0;
