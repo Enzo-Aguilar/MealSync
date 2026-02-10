@@ -1,26 +1,41 @@
 (function () {
-    const root = document.documentElement;
-  
-    function applyTheme(theme) {
-      root.setAttribute("data-theme", theme);
-      localStorage.setItem("theme", theme);
+  const root = document.documentElement;
+  const themeToggleButton = document.querySelector("#themeToggle"); // Assuming you have a button with id="theme-toggle"
+
+  function applyTheme(theme) {
+    root.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+
+    // Update the button emoji based on the theme
+    updateButtonEmoji(theme);
+  }
+
+  function toggleTheme() {
+    const current = root.getAttribute("data-theme") || "light";
+    const newTheme = current === "dark" ? "light" : "dark";
+    applyTheme(newTheme);
+  }
+
+  function updateButtonEmoji(theme) {
+    if (theme === "dark") {
+      themeToggleButton.textContent = "🌣";
+    } else {
+      themeToggleButton.textContent = "☽";
     }
-  
-    function toggleTheme() {
-      const current = root.getAttribute("data-theme") || "light";
-      applyTheme(current === "dark" ? "light" : "dark");
+  }
+
+  function initTheme() {
+    const saved = localStorage.getItem("theme");
+    if (saved) {
+      applyTheme(saved);
+    } else {
+      applyTheme("light"); // Default to light theme if no preference saved
     }
-  
-    function initTheme() {
-      const saved = localStorage.getItem("theme");
-      if (saved) {
-        applyTheme(saved);
-      }
-    }
-  
-    // expose globally
-    window.toggleTheme = toggleTheme;
-    window.initTheme = initTheme;
+  }
+
+  // Expose globally
+  window.toggleTheme = toggleTheme;
+  window.initTheme = initTheme;
 })();
   
 

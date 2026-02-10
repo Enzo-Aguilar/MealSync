@@ -1,42 +1,23 @@
-export function validPassword(password){
-
-    if(password.value.length <= 5){
-        return false;
-    }
-        return true
-}
-
-export function validUsername(username){
-    if(username.value.length <= 2){
-      username.value = "";  
-      return false;  
-    }  
-    return true;
-}    
-
-/*
-export function matchPassword(password, password_index){
-    if(password.value != password_index.value){
-        password_index.value = "";
-        return false;
-    }
+export function emailLength(email){
+    
+   if(email.value.length < 15 || email.value.length > 85){
+    return false;
+   }
+0    
     return true;
 }
-//Dont need a validEmail func cuz the input type ="email" alredy does all the basic validations
 
-export function matchEmail(email, email_index){
-    if(email.value != email_index.value){
-        
-        return false;
+export function emailSpecialChar(email) {
+  return /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);
+}
+
+export function is_EPGE(email){
+    if(email.endsWith("@epge.pt")){
+        return true;
     }
-        return true;
+    return false;
 }
 
-export function matchBoth(){
-    if(validPassword == true && matchPassword == true && matchEmail == true){
-        
-        return true;
-    }    
-        return false;
-}
-*/
+export function passwordCheck(password) {}
+
+export function usernameCheck(username) {}
